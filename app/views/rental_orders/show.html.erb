@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Parking address:</strong>
+  <%= @rental_order.parking_address %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @rental_order.user %>
+</p>
+
+<p>
+  <strong>Rentstart:</strong>
+  <%= @rental_order.rentStart %>
+</p>
+
+<p>
+  <strong>Rentend:</strong>
+  <%= @rental_order.rentEnd %>
+</p>
+
+<p>
+  <strong>Ordertotal:</strong>
+  <%= @rental_order.orderTotal %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @rental_order.status %>
+</p>
+
+<%= link_to 'Edit', edit_rental_order_path(@rental_order) %> |
+<%= link_to 'Back', rental_orders_path %>

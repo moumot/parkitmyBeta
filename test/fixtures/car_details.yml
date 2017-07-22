@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  carRegistrationNumber: MyString
+  manufacturer: MyString
+  model: MyString
+  color: MyString
+  roadTaxNumber: MyString
+
+two:
+  user: two
+  carRegistrationNumber: MyString
+  manufacturer: MyString
+  model: MyString
+  color: MyString
+  roadTaxNumber: MyString

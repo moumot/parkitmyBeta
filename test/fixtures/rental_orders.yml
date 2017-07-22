@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  parking_address: one
+  user: one
+  rentStart: 2017-07-22 16:51:36
+  rentEnd: 2017-07-22 16:51:36
+  orderTotal: 1.5
+  status: false
+
+two:
+  parking_address: two
+  user: two
+  rentStart: 2017-07-22 16:51:36
+  rentEnd: 2017-07-22 16:51:36
+  orderTotal: 1.5
+  status: false

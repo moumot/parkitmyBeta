@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Parking Addresses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Address</th>
+      <th>Building</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Postcode</th>
+      <th>Additionaldetails</th>
+      <th>Monthlyrate</th>
+      <th>Weeklyrate</th>
+      <th>Dailyrate</th>
+      <th>Hourlyrate</th>
+      <th>Xcoordinates</th>
+      <th>Ycoordinate</th>
+      <th>Approval</th>
+      <th>Features</th>
+      <th>Status</th>
+      <th>Availablefrom</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parking_addresses.each do |parking_address| %>
+      <tr>
+        <td><%= parking_address.user %></td>
+        <td><%= parking_address.address %></td>
+        <td><%= parking_address.building %></td>
+        <td><%= parking_address.city %></td>
+        <td><%= parking_address.state %></td>
+        <td><%= parking_address.country %></td>
+        <td><%= parking_address.postcode %></td>
+        <td><%= parking_address.additionalDetails %></td>
+        <td><%= parking_address.monthlyRate %></td>
+        <td><%= parking_address.weeklyRate %></td>
+        <td><%= parking_address.dailyRate %></td>
+        <td><%= parking_address.hourlyRate %></td>
+        <td><%= parking_address.xCoordinates %></td>
+        <td><%= parking_address.yCoordinate %></td>
+        <td><%= parking_address.approval %></td>
+        <td><%= parking_address.features %></td>
+        <td><%= parking_address.status %></td>
+        <td><%= parking_address.availableFrom %></td>
+        <td><%= link_to 'Show', parking_address %></td>
+        <td><%= link_to 'Edit', edit_parking_address_path(parking_address) %></td>
+        <td><%= link_to 'Destroy', parking_address, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parking Address', new_parking_address_path %>

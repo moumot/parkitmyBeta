@@ -1,0 +1,107 @@
+<%= form_for(parking_address) do |f| %>
+  <% if parking_address.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(parking_address.errors.count, "error") %> prohibited this parking_address from being saved:</h2>
+
+      <ul>
+      <% parking_address.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :building %>
+    <%= f.text_field :building %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= f.label :postcode %>
+    <%= f.text_field :postcode %>
+  </div>
+
+  <div class="field">
+    <%= f.label :additionalDetails %>
+    <%= f.text_field :additionalDetails %>
+  </div>
+
+  <div class="field">
+    <%= f.label :monthlyRate %>
+    <%= f.text_field :monthlyRate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weeklyRate %>
+    <%= f.text_field :weeklyRate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dailyRate %>
+    <%= f.text_field :dailyRate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hourlyRate %>
+    <%= f.text_field :hourlyRate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :xCoordinates %>
+    <%= f.text_field :xCoordinates %>
+  </div>
+
+  <div class="field">
+    <%= f.label :yCoordinate %>
+    <%= f.text_field :yCoordinate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :approval %>
+    <%= f.check_box :approval %>
+  </div>
+
+  <div class="field">
+    <%= f.label :features %>
+    <%= f.text_field :features %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.check_box :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :availableFrom %>
+    <%= f.datetime_select :availableFrom %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

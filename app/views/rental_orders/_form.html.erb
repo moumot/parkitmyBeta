@@ -1,0 +1,47 @@
+<%= form_for(rental_order) do |f| %>
+  <% if rental_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rental_order.errors.count, "error") %> prohibited this rental_order from being saved:</h2>
+
+      <ul>
+      <% rental_order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :parking_address_id %>
+    <%= f.text_field :parking_address_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rentStart %>
+    <%= f.datetime_select :rentStart %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rentEnd %>
+    <%= f.datetime_select :rentEnd %>
+  </div>
+
+  <div class="field">
+    <%= f.label :orderTotal %>
+    <%= f.text_field :orderTotal %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.check_box :status %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
