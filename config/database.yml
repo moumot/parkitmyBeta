@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: railspark_production
-  username: railspark
-  password: railspark
+  #username: railspark
+  #password: railspark
